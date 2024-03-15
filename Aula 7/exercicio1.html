@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aula 07 - V-On e V-BIND</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-bind:style="{ backgroundColor: corFundo }">A cor do css está setada para {{ corFundo }}</h1>
+    </div>
+</body>
+</html>
+
+<script>
+    const { createApp } = Vue;
+    createApp({
+        data() {
+            return {
+                corFundo: 'red', // Inicializa com vermelho
+                contador: 0 // Contador de segundos
+            }
+        },
+        created() {
+            // Inicia um temporizador quando a instância é criada
+            this.temporizador = setInterval(() => {
+                this.contador++; // Incrementa o contador de segundos
+                
+                // Verifica a paridade do contador de segundos
+                if (this.contador % 2 === 0) {
+                    this.corFundo = 'red'; // Par: fundo vermelho
+                } else {
+                    this.corFundo = 'green'; // Ímpar: fundo verde
+                }
+            }, 1000); // 1000 milissegundos = 1 segundo
+        },
+        beforeUnmount() {
+            // Limpa o temporizador quando a instância for destruída
+            clearInterval(this.temporizador);
+        }
+    }).mount("#app")
+</script>
