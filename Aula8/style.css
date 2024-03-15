@@ -1,0 +1,45 @@
+.linha {
+    display: flex;
+}
+
+.calculadora {
+    background-color: #8ba;
+    width: 150px;
+    border-radius: 5px;
+}
+
+button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    margin: 2px ;
+    border-radius: 5px;
+    background-color: rgb(183, 212, 202);
+}
+
+.operador {
+    background-color: rgb(105, 142, 130);
+}
+
+button:hover{
+    background-color: rgb(160, 206, 191);
+}
+
+.operador:hover{
+    background-color: rgb(160, 206, 191);
+}
+
+.igual {
+    background-color: rgb(112, 137, 129);
+}
+
+.display{
+    display: flex;
+    background-color: aliceblue;
+    height: 35px;
+    justify-content: end;
+    align-items: center;
+    margin: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
