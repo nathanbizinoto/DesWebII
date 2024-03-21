@@ -18,30 +18,30 @@
                 <button class="operador" @click="">C</button>
             </div>
             <div class="linha">
-                <button @click="">7</button>
-                <button @click="">8</button>
-                <button @click="">9</button>
-                <button class="operador" @click="">/</button>
+                <button @click="lidarBotao('7')">7</button>
+                <button @click="lidarBotao('8')">8</button>
+                <button @click="lidarBotao('9')">9</button>
+                <button class="operador" @click="lidarBotao('/')">/</button>
             </div>
 
 
             <div class="linha">
-                <button @click="">4</button>
-                <button @click="">5</button>
-                <button @click="">6</button>
-                <button class="operador" @click="">X</button>
+                <button @click="lidarBotao('4')">4</button>
+                <button @click="lidarBotao('5')">5</button>
+                <button @click="lidarBotao('6')">6</button>
+                <button class="operador" @click="lidarBotao('X')">X</button>
             </div>
             <div class="linha">
-                <button @click="">1</button>
-                <button @click="">2</button>
-                <button @click="">3</button>
-                <button class="operador" @click="">-</button>
+                <button @click="lidarBotao('1')">1</button>
+                <button @click="lidarBotao('2')">2</button>
+                <button @click="lidarBotao('3')">3</button>
+                <button class="operador" @click="lidarBotao('-')">-</button>
             </div>
             <div class="linha">
-                <button class="decimal" @click="">.</button>
-                <button @click="">0</button>
-                <button class="igual" @click="">=</button>
-                <button class="operador" @click="">+</button>
+                <button class="decimal" @click="lidarBotao('.')">.</button>
+                <button @click="lidarBotao('0')">0</button>
+                <button class="igual" @click="lidarBotao('=')">=</button>
+                <button class="operador" @click="lidarBotao('+')">+</button>
             </div>
         </div>
 
@@ -52,3 +52,5 @@
 </body>
 
 </html>
+
+<script src="index.js"></script>
