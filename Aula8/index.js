@@ -1,48 +1,46 @@
-const { createApp} =  vue;
+const {createApp} = Vue;
 
-createApp( {
-    data() {
-        return{
+createApp({
+    data () {
+        return {
             display: "0",
             numeroAnterior: null,
+            numeroAtual: null,
             operador: null
-
         }
-    },
+    } ,
     methods: {
-        LidarBotao(botao) {
-            switch (botao)
+        lidarBotao(valor) {
+            switch (valor)
             {
                 case '*':
-                case '%':
+                case '/':
                 case '-':
                 case '+':
-                    this.lidarOperador(botao);
+                    this.lidarOperador(valor);
                     break;
-                
+
                 case '.':
                     this.lidarDecimal();
                     break;
-
+                
                 case 'C':
                     this.lidarLimpar();
                     break;
-                
+
                 case '=':
                     this.lidarIgual();
                     break;
 
-                default:
-                    this.lidarNumero(botao);
-
-                
+                default: 
+                this.lidarNumero(valor);
             }
         },
-        lidarOperador() {
-            console.log("O botão digitado foi: ", valor);
+        lidarOperador(valor) {
+            this.operador = this.lidarBotao;
         },
         lidarDecimal() {
-            console.log("Entrou no decimal");
+            this.display = numeroAnterior + "." + numeroAtual;
         },
         lidarLimpar() {
             this.display = '0';
@@ -50,14 +48,12 @@ createApp( {
             this.numeroAnterior = null;
             this.operador = null;
         },
-        lidarIgual() {
+        lidarIgual () {
             console.log("Entrou no igual");
         },
         lidarNumero(valor) {
-            console.log("O botão digitado foi: ", valor);
+             
         }
-
-
     }
-
+    
 }).mount("#app");
