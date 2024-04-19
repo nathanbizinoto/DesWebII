@@ -1,15 +1,26 @@
 const { createApp } = Vue
 
-createApp( {
+createApp({
     data() {
-        return{
+        return {
             firstName: '',
-            lastName: ''
+            lastName: '',
+            status: false,
+            interruptor: '',
         }
     },
-    methods:{
+    methods: {
         fullName() {
-            return (this.firstName + " " + this.lastName)
+            return (this.firstName + " " + this.lastName);
+        }
+    },
+    watch: {
+        interruptor(newVal) {
+            if (newVal() === 'acender') {
+                this.status = true;
+            } else if (newVal() === 'apagar') {
+                this.status = false;
+            }
         }
     }
 }).mount("#app");
