@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Aula 12 - Componentes</title>
+    <title>Aula 12 - Componentes</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
@@ -11,8 +11,9 @@
     <button @click="alterarComponentes">Alterar componentes</button>
 
     <transition name="fade" mode="out-in">
-        <compnent :is="componenteAtual"></compnent>
+        <component :is="componenteAtual"></component>
     </transition>
 </div>
 </body>
 </html>
+<script src="index.js"></script>

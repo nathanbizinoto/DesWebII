@@ -1,6 +1,6 @@
 #app {
-text-align: center;
-margin: 0;
+    text-align: center;
+    margin: 0;
 }
 
 button {
@@ -9,6 +9,10 @@ button {
     cursor: pointer;
 }
 
-.fade-enter-active .fade-leave-active{
+.fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
 }
