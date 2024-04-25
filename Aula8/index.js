@@ -55,5 +55,10 @@ createApp({
              
         }
     }
+<<<<<<< HEAD
     
 }).mount("#app");
+=======
+
+}).mount("#app");
+>>>>>>> bb46444ce87c64946fefbfe1356befbfe88a4134

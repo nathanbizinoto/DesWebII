@@ -12,6 +12,22 @@
     <div id="app">
         <label><input type="checkbox" v-model="ehRoxo">Roxo</label>
         <input type="number" v-model="valor">
+        <input type="number" v-model="valor">
+        <select v-model="selecionarCor">
+            <option value="">Branco</option>
+            <option value="texto-laranja">Laranja</option>
+            <option value="texto-preto">Preto</option>
+        </select>
+        <div class="circulo"
+            :class="[circuloRoxo, selecionarCor]"
+            :style="{
+                width: tamanho + 'px',
+                height: tamanho + 'px',
+                lineHeight: tamanho + 'px',
+                transform: `rotate(${valor})`
+            }">
+            Olá
+        </div>
 
     </div>
     
